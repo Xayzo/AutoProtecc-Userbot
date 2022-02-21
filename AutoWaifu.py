@@ -6,7 +6,6 @@ import requests
 
 from re import findall
 from bs4 import BeautifulSoup
-from aiohttp import ClientSession
 from asyncio import (
     gather,
     get_event_loop,
@@ -39,7 +38,6 @@ headers_ = [("User-agent", u_)]
 
 
 async def ParseSauce(googleurl):
-    async with aiohttp.ClientSession(headers=headers_) as session:
         async with session.get(googleurl) as resp:
             source = await resp.read()
     soup = BeautifulSoup(source, "html.parser")
