@@ -92,7 +92,7 @@ async def main():
 -------------------
 | System Started! |
 -------------------
-| By Yoga Pranata |
+| By Dion |
 -------------------
 """
     )
